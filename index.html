@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ing. Agr. Ivone Humacata">
+
+<title>DISEÑO EXPERIMENTAL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="007anaco_files/libs/clipboard/clipboard.min.js"></script>
+<script src="007anaco_files/libs/quarto-html/quarto.js"></script>
+<script src="007anaco_files/libs/quarto-html/popper.min.js"></script>
+<script src="007anaco_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="007anaco_files/libs/quarto-html/anchor.min.js"></script>
+<link href="007anaco_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="007anaco_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="007anaco_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="007anaco_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="007anaco_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#analisis-de-covarianza-anaco" id="toc-analisis-de-covarianza-anaco" class="nav-link active" data-scroll-target="#analisis-de-covarianza-anaco"><span class="toc-section-number">1</span>  ANALISIS DE COVARIANZA (ANACO)</a>
+  <ul class="collapse">
+  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link" data-scroll-target="#objetivos-de-aprendizaje"><span class="toc-section-number">1.1</span>  OBJETIVOS DE APRENDIZAJE</a></li>
+  <li><a href="#introduccion" id="toc-introduccion" class="nav-link" data-scroll-target="#introduccion"><span class="toc-section-number">1.2</span>  INTRODUCCION</a></li>
+  <li><a href="#usos-del-análisis-de-covarianza" id="toc-usos-del-análisis-de-covarianza" class="nav-link" data-scroll-target="#usos-del-análisis-de-covarianza"><span class="toc-section-number">1.3</span>  Usos del análisis de covarianza</a></li>
+  <li><a href="#ejemplo-10-peso-de-ratones-en-distintas-dietas" id="toc-ejemplo-10-peso-de-ratones-en-distintas-dietas" class="nav-link" data-scroll-target="#ejemplo-10-peso-de-ratones-en-distintas-dietas"><span class="toc-section-number">1.4</span>  EJEMPLO 10 ~ PESO DE RATONES EN DISTINTAS DIETAS</a>
+  <ul class="collapse">
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo"><span class="toc-section-number">1.4.1</span>  OBJETIVO</a></li>
+  <li><a href="#aleatorizacion" id="toc-aleatorizacion" class="nav-link" data-scroll-target="#aleatorizacion"><span class="toc-section-number">1.4.2</span>  ALEATORIZACION</a></li>
+  <li><a href="#unidades-experimentales" id="toc-unidades-experimentales" class="nav-link" data-scroll-target="#unidades-experimentales"><span class="toc-section-number">1.4.3</span>  UNIDADES EXPERIMENTALES</a></li>
+  <li><a href="#unidades-de-observacion" id="toc-unidades-de-observacion" class="nav-link" data-scroll-target="#unidades-de-observacion"><span class="toc-section-number">1.4.4</span>  UNIDADES DE OBSERVACION</a></li>
+  <li><a href="#variable-respuesta" id="toc-variable-respuesta" class="nav-link" data-scroll-target="#variable-respuesta"><span class="toc-section-number">1.4.5</span>  VARIABLE RESPUESTA</a></li>
+  <li><a href="#variable-concomitante" id="toc-variable-concomitante" class="nav-link" data-scroll-target="#variable-concomitante"><span class="toc-section-number">1.4.6</span>  VARIABLE CONCOMITANTE</a></li>
+  <li><a href="#diseño" id="toc-diseño" class="nav-link" data-scroll-target="#diseño"><span class="toc-section-number">1.4.7</span>  DISEÑO</a></li>
+  <li><a href="#cargar-la-base-de-datos" id="toc-cargar-la-base-de-datos" class="nav-link" data-scroll-target="#cargar-la-base-de-datos"><span class="toc-section-number">1.4.8</span>  CARGAR LA BASE DE DATOS</a></li>
+  <li><a href="#analisis-exploratorio" id="toc-analisis-exploratorio" class="nav-link" data-scroll-target="#analisis-exploratorio"><span class="toc-section-number">1.4.9</span>  ANALISIS EXPLORATORIO</a></li>
+  <li><a href="#modelo-matematico" id="toc-modelo-matematico" class="nav-link" data-scroll-target="#modelo-matematico"><span class="toc-section-number">1.4.10</span>  MODELO MATEMATICO</a></li>
+  <li><a href="#hipotesis-de-analisis" id="toc-hipotesis-de-analisis" class="nav-link" data-scroll-target="#hipotesis-de-analisis"><span class="toc-section-number">1.4.11</span>  HIPOTESIS DE ANALISIS</a></li>
+  <li><a href="#anova" id="toc-anova" class="nav-link" data-scroll-target="#anova"><span class="toc-section-number">1.4.12</span>  ANOVA</a></li>
+  <li><a href="#verificacion-de-los-supuestos-del-modelo" id="toc-verificacion-de-los-supuestos-del-modelo" class="nav-link" data-scroll-target="#verificacion-de-los-supuestos-del-modelo"><span class="toc-section-number">1.4.13</span>  VERIFICACION DE LOS SUPUESTOS DEL MODELO</a></li>
+  <li><a href="#conclusiones-del-modelo-planteado" id="toc-conclusiones-del-modelo-planteado" class="nav-link" data-scroll-target="#conclusiones-del-modelo-planteado"><span class="toc-section-number">1.4.14</span>  CONCLUSIONES DEL MODELO PLANTEADO</a></li>
+  <li><a href="#confiabilidad-del-modelo" id="toc-confiabilidad-del-modelo" class="nav-link" data-scroll-target="#confiabilidad-del-modelo"><span class="toc-section-number">1.4.15</span>  CONFIABILIDAD DEL MODELO</a></li>
+  <li><a href="#prueba-post-hoc-test-de-tukey" id="toc-prueba-post-hoc-test-de-tukey" class="nav-link" data-scroll-target="#prueba-post-hoc-test-de-tukey"><span class="toc-section-number">1.4.16</span>  PRUEBA POST HOC: TEST DE TUKEY</a></li>
+  <li><a href="#recomendación" id="toc-recomendación" class="nav-link" data-scroll-target="#recomendación"><span class="toc-section-number">1.4.17</span>  Recomendación</a></li>
+  </ul></li>
+  <li><a href="#recursos-recomendados" id="toc-recursos-recomendados" class="nav-link" data-scroll-target="#recursos-recomendados"><span class="toc-section-number">1.5</span>  RECURSOS RECOMENDADOS</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">DISEÑO EXPERIMENTAL</h1>
+<p class="subtitle lead">Facultad de Ciencias Agrarias - UNJu. Año 2023</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ing. Agr. Ivone Humacata </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="analisis-de-covarianza-anaco" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> ANALISIS DE COVARIANZA (ANACO)</h1>
+<section id="objetivos-de-aprendizaje" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="objetivos-de-aprendizaje"><span class="header-section-number">1.1</span> OBJETIVOS DE APRENDIZAJE</h2>
+<div style="text-align: justify">
+
+<ol type="1">
+<li><p>Plantear adecuadamente los componentes del modelo matemático de un análisis de covarianza.</p></li>
+<li><p>Desarrollar habilidades en el manejo de software para realizar el análisis estadístico.</p></li>
+<li><p>Aplicar el ANACO a casos prácticos relacionados con su disciplina.</p></li>
+<li><p>Evaluar la confiabilidad del modelo aplicado.</p></li>
+<li><p>Interpretar y comunicar los resultados.</p></li>
+</ol>
+</div></section>
+<section id="introduccion" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="introduccion"><span class="header-section-number">1.2</span> INTRODUCCION</h2>
+<div style="text-align: justify">
+
+<p>Es una técnica estadística utilizada en estudios donde el experimentador advierte o sospecha la presencia de una variable que podría estar influenciando el comportamiento de la unidad experimental; la variable respuesta esta relacionada con una o más variables concomitantes. Es una técnica que utiliza el análisis de regresión y el análisis de varianza para manejar casos en los cuales se tienen una o más variables externas al experimento que no están afectadas a los tratamientos e influyen en el valor observado (<span class="math inline">Y_{ij}</span>).</p>
+</div></section>
+<section id="usos-del-análisis-de-covarianza" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="usos-del-análisis-de-covarianza"><span class="header-section-number">1.3</span> Usos del análisis de covarianza</h2>
+<p>Dentro de los posibles usos del ANACO están:</p>
+<p>i. Control de variables externas que implica una disminución del error que se traduce en una mayor precisión del análisis.</p>
+<p>ii. Ajuste de las medias de tratamientos de la variable dependiente (Y) por las diferentes variables independientes (concomitantes).</p>
+<p>iii. Ayudar en la interpretación de los datos, específicamente en la naturaleza del efecto de los tratamientos.</p>
+<p>Se entiende que la variable X tiene un efecto en la variable Y, sin embargo esta dependencia deberá ser probada estadísticamente mediante el análisis de regresión.</p>
+</section>
+<section id="ejemplo-10-peso-de-ratones-en-distintas-dietas" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="ejemplo-10-peso-de-ratones-en-distintas-dietas"><span class="header-section-number">1.4</span> EJEMPLO 10 ~ PESO DE RATONES EN DISTINTAS DIETAS</h2>
+<div style="text-align: justify">
+
+<p>Se desarrolló un DCA con distinto número de repeticiones, el objetivo fue: comparar dietas diferentes en la tasa de crecimiento de ratones. Se sospechó de la influencia de las edades de los ratones, y que esta variable podría influir en los resultados. La tasa de crecimiento se midió en mg/semana y la variable edad en días. Las dietas suministradas fueron: A: dieta estándar, B: dieta alta en grasas y C: dieta alta en proteínas.</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Dieta</td>
+<td>A</td>
+<td></td>
+<td>B</td>
+<td></td>
+<td>C</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Repeticiones</td>
+<td>Edad</td>
+<td>Tasa</td>
+<td>Edad</td>
+<td>Tasa</td>
+<td>Edad</td>
+<td>Tasa</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>21</td>
+<td>3.5</td>
+<td>24</td>
+<td>4.4</td>
+<td>23</td>
+<td>2.4</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>26</td>
+<td>3.9</td>
+<td>26</td>
+<td>3.8</td>
+<td>29</td>
+<td>3.2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>22</td>
+<td>3.6</td>
+<td>29</td>
+<td>3.9</td>
+<td>30</td>
+<td>4.0</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>28</td>
+<td>4.5</td>
+<td>18</td>
+<td>2.7</td>
+<td>16</td>
+<td>2.1</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>29</td>
+<td>4.3</td>
+<td></td>
+<td></td>
+<td>29</td>
+<td>2.8</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>14</td>
+<td>1.9</td>
+</tr>
+</tbody>
+</table>
+<section id="objetivo" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="objetivo"><span class="header-section-number">1.4.1</span> OBJETIVO</h3>
+<p>Comparar el efecto de tres tipos de dietas en la tasa de crecimiento en ratones.</p>
+</section>
+<section id="aleatorizacion" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="aleatorizacion"><span class="header-section-number">1.4.2</span> ALEATORIZACION</h3>
+<p>Se aleatorizó los tratamientos a cada uno de los ratones.</p>
+</section>
+<section id="unidades-experimentales" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="unidades-experimentales"><span class="header-section-number">1.4.3</span> UNIDADES EXPERIMENTALES</h3>
+<p>Cada uno de los ratones a los que se aplicó cada tratamiento (n=15).</p>
+</section>
+<section id="unidades-de-observacion" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="unidades-de-observacion"><span class="header-section-number">1.4.4</span> UNIDADES DE OBSERVACION</h3>
+<p>Cada uno de los ratones de los cuales se obtiene el dato de peso para calcular la tasa de crecimiento.</p>
+</section>
+<section id="variable-respuesta" class="level3" data-number="1.4.5">
+<h3 data-number="1.4.5" class="anchored" data-anchor-id="variable-respuesta"><span class="header-section-number">1.4.5</span> VARIABLE RESPUESTA</h3>
+<p>La tasa de crecimiento en miligramos/semana.</p>
+</section>
+<section id="variable-concomitante" class="level3" data-number="1.4.6">
+<h3 data-number="1.4.6" class="anchored" data-anchor-id="variable-concomitante"><span class="header-section-number">1.4.6</span> VARIABLE CONCOMITANTE</h3>
+<p>La edad de los ratones al inicio del experimento, en días.</p>
+</section>
+<section id="diseño" class="level3" data-number="1.4.7">
+<h3 data-number="1.4.7" class="anchored" data-anchor-id="diseño"><span class="header-section-number">1.4.7</span> DISEÑO</h3>
+<p>Análisis de covarianza aplicado a un DCA.</p>
+</section>
+<section id="cargar-la-base-de-datos" class="level3" data-number="1.4.8">
+<h3 data-number="1.4.8" class="anchored" data-anchor-id="cargar-la-base-de-datos"><span class="header-section-number">1.4.8</span> CARGAR LA BASE DE DATOS</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"ratones.xlsx"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>datos<span class="sc">$</span>dietas<span class="ot">&lt;-</span> <span class="fu">as.factor</span> (datos<span class="sc">$</span>dietas)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [15 × 3] (S3: tbl_df/tbl/data.frame)
+ $ dietas: Factor w/ 3 levels "A","B","C": 1 1 1 1 1 2 2 2 2 3 ...
+ $ edad  : num [1:15] 21 26 22 28 29 24 26 29 18 23 ...
+ $ tasa  : num [1:15] 3.5 3.9 3.6 4.5 4.3 4.4 3.8 3.9 2.7 2.4 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="analisis-exploratorio" class="level3" data-number="1.4.9">
+<h3 data-number="1.4.9" class="anchored" data-anchor-id="analisis-exploratorio"><span class="header-section-number">1.4.9</span> ANALISIS EXPLORATORIO</h3>
+<p><strong>Gráfico de cajas para la variable tasa de crecimiento</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># grafico de cajas para tasa de crecimiento</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> dietas, <span class="at">y =</span> tasa)) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"dietas"</span>, <span class="at">y =</span> <span class="st">"tasa de crecimiento"</span>) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Tasa de crecimiento segun dietas"</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="007anaco_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Gráfico de cajas para la variable edades</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># grafico de cajas para edad</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> dietas, <span class="at">y =</span> edad)) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"dietas"</span>, <span class="at">y =</span> <span class="st">"edades"</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Edades segun dietas"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="007anaco_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Medidas de resumen</strong><br>
+Podemos calcularlas con la función summary.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(datos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> dietas      edad            tasa     
+ A:5    Min.   :14.00   Min.   :1.90  
+ B:4    1st Qu.:21.50   1st Qu.:2.75  
+ C:6    Median :26.00   Median :3.60  
+        Mean   :24.27   Mean   :3.40  
+        3rd Qu.:29.00   3rd Qu.:3.95  
+        Max.   :30.00   Max.   :4.50  </code></pre>
+</div>
+</div>
+<p>Solicitamos los desvíos estándares para conocer más los datos:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># solicitar desvios</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>datos <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(dietas) <span class="sc">%&gt;%</span>  </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">media.tasa =</span> <span class="fu">mean</span>(tasa),</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">sd.tasa =</span> <span class="fu">sd</span>(tasa),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">CV.tasa=</span>media.tasa<span class="sc">/</span>sd.tasa,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">media.edad=</span> <span class="fu">round</span>(<span class="fu">mean</span>(edad),<span class="dv">0</span>), </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">sd.edad =</span> <span class="fu">round</span>(<span class="fu">sd</span>(edad),<span class="dv">0</span>),</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">CV.edad=</span>media.edad<span class="sc">/</span>sd.edad</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 7
+  dietas media.tasa sd.tasa CV.tasa media.edad sd.edad CV.edad
+  &lt;fct&gt;       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 A            3.96   0.434    9.13         25       4    6.25
+2 B            3.7    0.716    5.16         24       5    4.8 
+3 C            2.73   0.779    3.51         24       7    3.43</code></pre>
+</div>
+</div>
+</section>
+<section id="modelo-matematico" class="level3" data-number="1.4.10">
+<h3 data-number="1.4.10" class="anchored" data-anchor-id="modelo-matematico"><span class="header-section-number">1.4.10</span> MODELO MATEMATICO</h3>
+<p>El modelo matemático para ANACO aplicado a un DCA es:</p>
+<p><span class="math inline">y_{ij}= \mu + \tau_i + \beta X_{ij} + \epsilon_{ij}</span></p>
+<p>Con<br>
+i=A, B, C<br>
+j=1, …, 5 para el tratamiento A; 1, …, 4 para el tratamiento B; 1, …, 6 para el tratamiento C<br>
+</p>
+<p>Donde:</p>
+<p><span class="math inline">y_{ij}</span> es la tasa de crecimiento en mg/semana.<br>
+</p>
+<p><span class="math inline">\mu</span> es la media general.<br>
+<span class="math inline">\tau_i</span> es el efecto de la i-esima dieta.<br>
+<span class="math inline">\beta</span> el coeficiente de regresion lineal simple de la edad sobre la tasa de crecimiento<br>
+<span class="math inline">X_{ij}</span> es la covariable edad de los ratones al inicio del experimento.<br>
+<span class="math inline">\epsilon_{ij}</span> es el error aleatorio con <span class="math inline">\sim N(0, \sigma^2)</span></p>
+</section>
+<section id="hipotesis-de-analisis" class="level3" data-number="1.4.11">
+<h3 data-number="1.4.11" class="anchored" data-anchor-id="hipotesis-de-analisis"><span class="header-section-number">1.4.11</span> HIPOTESIS DE ANALISIS</h3>
+<p><strong>Para tratamientos</strong></p>
+<p><span class="math inline">H_0</span>: las medias de las dietas son iguales despues de ajustar por la covariable edad.</p>
+<p><span class="math inline">H_a</span>: al menos una de las medias de tratamientos es diferente a las demás despues de ajustar por la covariable edad.</p>
+<p><strong>Para la covariable</strong></p>
+<p><span class="math inline">Ho</span>: no hay regresión entre las variables (<span class="math inline">\beta = 0</span>)</p>
+<p><span class="math inline">Ha</span>: hay regresión entre las variables (<span class="math inline">\beta \neq 0</span>)</p>
+</section>
+<section id="anova" class="level3" data-number="1.4.12">
+<h3 data-number="1.4.12" class="anchored" data-anchor-id="anova"><span class="header-section-number">1.4.12</span> ANOVA</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># aplicar el modelo planteado</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>modelo<span class="ot">=</span><span class="fu">lm</span>(tasa <span class="sc">~</span> edad<span class="sc">+</span>dietas,datos)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">aov</span>(modelo))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+edad         1  4.889   4.889   34.32 0.00011 ***
+dietas       2  3.464   1.732   12.16 0.00164 ** 
+Residuals   11  1.567   0.142                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Con un p-valor menor al nivel de significación se rechaza la Ho para dietas.</p>
+<p>Con un p-valor menor al nivel de significación se rechaza la Ho para la covariable.</p>
+<p><strong>Conclusión</strong></p>
+<p>Existen diferencias estadísticas significativas entre las medias de las dietas despues de ajustar por la covariable edad. Es necesario validar el modelo para que la conclusión sea válida y hacer un reporte completo.</p>
+</section>
+<section id="verificacion-de-los-supuestos-del-modelo" class="level3" data-number="1.4.13">
+<h3 data-number="1.4.13" class="anchored" data-anchor-id="verificacion-de-los-supuestos-del-modelo"><span class="header-section-number">1.4.13</span> VERIFICACION DE LOS SUPUESTOS DEL MODELO</h3>
+<ol type="1">
+<li>La covariable y los tratamientos son independientes.</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># verificación de supuesto </span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ho: la covariables es independiente de los tratamientos</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ha: la covariable no es independiente de los tratamientos</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">aov</span>(edad <span class="sc">~</span> dietas, datos)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Df Sum Sq Mean Sq F value Pr(&gt;F)
+dietas       2    7.9   3.942    0.13   0.88
+Residuals   12  365.0  30.421               </code></pre>
+</div>
+</div>
+<p>Con un p-valor mayor al nivel de significacion no se rechaza la Ho.</p>
+<p>La covariable es independiente de los tratamientos.</p>
+<ol start="2" type="1">
+<li>Normalidad de residuos</li>
+</ol>
+<p><strong>Test de Shapiro Wilk</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supuesto de normalidad</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ho: los residuos tienen distribución normal</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ha: los residuos no tienen distribución normal</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">resid</span>(modelo))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  resid(modelo)
+W = 0.92427, p-value = 0.2237</code></pre>
+</div>
+</div>
+<p>Con un p-valor mayor al nivel de significación no se rechaza la Ho.</p>
+<p>Se cumple el supuesto de normalidad de residuos.</p>
+<ol start="3" type="1">
+<li>Homogeneidad de varianzas</li>
+</ol>
+<p><strong>Test de Levene</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># supuesto de homogeneidad de varianzas</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Ho: las varianzas son iguales</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ha: las varianzas no son iguales</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>trat<span class="ot">=</span>datos<span class="sc">$</span>dietas</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">leveneTest</span>(<span class="fu">resid</span>(modelo),trat,<span class="at">center =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levene's Test for Homogeneity of Variance (center = mean)
+      Df F value Pr(&gt;F)
+group  2  2.0658 0.1694
+      12               </code></pre>
+</div>
+</div>
+<p>Con un p-valor mayor al nivel de significación no se rechaza la Ho.</p>
+<p>Se cumple el supuesto de homogeneidad de varianzas.</p>
+<ol start="4" type="1">
+<li>Relación lineal entre la variable y la covariable</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>datos<span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(edad, tasa, <span class="at">colour =</span> dietas)) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="fu">aes</span>(<span class="at">fill =</span> dietas), <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="007anaco_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Se observa que hay una relación lineal entre la tasa de crecimiento y la edad de ratones.</p>
+</section>
+<section id="conclusiones-del-modelo-planteado" class="level3" data-number="1.4.14">
+<h3 data-number="1.4.14" class="anchored" data-anchor-id="conclusiones-del-modelo-planteado"><span class="header-section-number">1.4.14</span> CONCLUSIONES DEL MODELO PLANTEADO</h3>
+<p>Se concluye que hay diferencias estadísticas significativas entre las medias de las dietas (<span class="math inline">F_{(2, 11)}</span>=12.16, p-value=0.0016) al ajustar por edades de ratones.</p>
+<p>La covariable edad es significativa (<span class="math inline">F_{(1, 11)}=34.32</span>, p-value=0.0001) lo que indica que es un predictor importante en la tasa de crecimiento de las dietas.</p>
+<p><strong>Medias ajustadas</strong></p>
+<p>Se puede obtener las medias ajustadas por la covariable con la función emmeans_test de la libreria rstatix.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("rstatix")</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstatix)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>adj.medias <span class="ot">&lt;-</span> <span class="fu">emmeans_test</span>(datos, <span class="at">formula =</span> tasa <span class="sc">~</span> dietas, <span class="at">covariate =</span> edad)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">get_emmeans</span>(adj.medias)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 8
+   edad dietas emmean    se    df conf.low conf.high method      
+  &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;       
+1  24.3 A        3.87 0.170    11     3.49      4.24 Emmeans test
+2  24.3 B        3.70 0.189    11     3.29      4.12 Emmeans test
+3  24.3 C        2.81 0.155    11     2.47      3.15 Emmeans test</code></pre>
+</div>
+</div>
+<p>Se observa que la dieta A posee la mayor tasa media de crecimiento, controlando el efecto de las edades.</p>
+</section>
+<section id="confiabilidad-del-modelo" class="level3" data-number="1.4.15">
+<h3 data-number="1.4.15" class="anchored" data-anchor-id="confiabilidad-del-modelo"><span class="header-section-number">1.4.15</span> CONFIABILIDAD DEL MODELO</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># coeficiente de variacion</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>CMEE<span class="ot">=</span><span class="fl">0.142</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>(<span class="fu">sqrt</span>(CMEE))<span class="sc">/</span><span class="fu">mean</span>(datos<span class="sc">$</span>tasa)<span class="sc">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11.0832</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># coefiente de determinación</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>r2modelo<span class="ot">=</span><span class="fu">summary</span>(modelo)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>r2modelo<span class="sc">$</span>r.squared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8420313</code></pre>
+</div>
+</div>
+<p>Con un CV bajo podemos decir que el modelo es adecuado y con un <span class="math inline">r^2</span> igual a 0.84 tiene buen poder explicativo.</p>
+</section>
+<section id="prueba-post-hoc-test-de-tukey" class="level3" data-number="1.4.16">
+<h3 data-number="1.4.16" class="anchored" data-anchor-id="prueba-post-hoc-test-de-tukey"><span class="header-section-number">1.4.16</span> PRUEBA POST HOC: TEST DE TUKEY</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>anaco.modelo <span class="ot">&lt;-</span> <span class="fu">aov</span>(tasa <span class="sc">~</span> edad <span class="sc">+</span> dietas, datos)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>postHocs <span class="ot">&lt;-</span> <span class="fu">glht</span>(anaco.modelo, <span class="at">linfct =</span> <span class="fu">mcp</span>(<span class="at">dietas =</span> <span class="st">"Tukey"</span>))</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(postHocs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Simultaneous Tests for General Linear Hypotheses
+
+Multiple Comparisons of Means: Tukey Contrasts
+
+
+Fit: aov(formula = tasa ~ edad + dietas, data = datos)
+
+Linear Hypotheses:
+           Estimate Std. Error t value Pr(&gt;|t|)   
+B - A == 0  -0.1636     0.2539  -0.644  0.79895   
+C - A == 0  -1.0542     0.2310  -4.563  0.00220 **
+C - B == 0  -0.8906     0.2441  -3.649  0.00975 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+(Adjusted p values reported -- single-step method)</code></pre>
+</div>
+</div>
+<p>Se obervan diferencias estadísticas significativas entre las dietas C vs A y C vs B.</p>
+</section>
+<section id="recomendación" class="level3" data-number="1.4.17">
+<h3 data-number="1.4.17" class="anchored" data-anchor-id="recomendación"><span class="header-section-number">1.4.17</span> Recomendación</h3>
+<p>La dieta A es significativamente mejor que la dieta C, y la dieta B es significativamente mejor que la dieta C.</p>
+<p>Opcional: con un gráfico es mejor</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># comparacion de medias con test de bonferroni</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">emmeans_test</span>(</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    tasa <span class="sc">~</span> dietas, <span class="at">covariate =</span> edad,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">p.adjust.method =</span> <span class="st">"bonferroni"</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Realizacion del gráfico</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> a <span class="sc">%&gt;%</span> <span class="fu">add_xy_position</span>(<span class="at">x =</span> <span class="st">"dietas"</span>, <span class="at">fun =</span> <span class="st">"mean_se"</span>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggline</span>(<span class="fu">get_emmeans</span>(a), <span class="at">x =</span> <span class="st">"dietas"</span>, <span class="at">y =</span> <span class="st">"emmean"</span>) <span class="sc">+</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high), <span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span> </span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_pvalue_manual</span>(a, <span class="at">hide.ns =</span> <span class="cn">TRUE</span>, <span class="at">tip.length =</span> <span class="cn">FALSE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="007anaco_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</div></section>
+<section id="recursos-recomendados" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="recursos-recomendados"><span class="header-section-number">1.5</span> RECURSOS RECOMENDADOS</h2>
+<p><strong>Bibliografia</strong></p>
+<p>Fernández Escobar, R., Trapero, A. y Dominguez, J. (2010). Experimentación en agricultura. Págs. 247-261. Consejería de Agricultura y Pesca, servicio de publicaciones y divulgación. Sevilla, España.&nbsp;</p>
+<p>Quinteros, H. (1997). Diseño Experimental. Facultad de Ciencias Agrarias, Universidad Nacional de Jujuy. Pags. 127-146.<br>
+</p>
+<p>Torres Armas, E. (2013). Metodos estadísticos para la investigación experimental. Perú. Págs. 114-120.<br>
+</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
